@@ -1,0 +1,99 @@
+body {
+    display: grid;
+    grid-gap: 1rem;
+
+    /* Arrange in three rows: each as tall as their content */
+    grid-template-rows: max-content max-content max-content;
+
+    /* Arrange in two columns: 
+     - right-hand-side a fixed width, 
+     - left-hand-side with the remaining space */
+    grid-template-columns: 1fr 10em;
+
+    /* As a default, in case the screen is VERY wide, 
+     - limit page width to a sensible maximum 
+     - and centre the page in the screen */
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+
+background-color: #1D3356;
+}
+nav {
+
+    /* Place navigation across the top of the page:
+     - in first row, from first to last column */
+text-align: center;
+    grid-row: 1;
+    grid-column: 1 / -1;
+
+
+}
+
+nav ul {
+    /* The ul element is semantic, indicating that the menu options are related,
+     but we don't want it to display like a bulleted list */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+color: #DAA520;
+
+}
+nav li {
+    /* Allow menu options to flow across the page and wrap */
+    display: inline-block;
+padding: 0.5rem;
+color: #DAA520;
+
+}
+nav a{
+color: #DAA520;
+font-size:1.5rem;
+ }
+
+
+.line {
+    border-top: 4px solid black;
+  position: absolute;
+
+  top: calc(4.5em + 1px); /* Adjust as needed to position the line below the nav */
+  left: 0;
+  right: 0;
+
+}.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo img {
+  height: 70px; /* adjust as needed */
+  width: 70px; /* adjust as needed */
+}
+footer {
+  grid-row: 90;
+  grid-column: 1 / -1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+background-color: #CD853F;
+    border-bottom: 0px solid  #CD853F;
+z-index: -1;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+margin-top: auto;
+}
+
+.row img {
+  margin-left: 1rem;
+width: 9rem;
+  height: 6rem;
+
+}
+
+</body>
+</html>
